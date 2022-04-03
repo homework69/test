@@ -1,0 +1,21 @@
+.block{
+    display: inline-flex;
+    flex-direction: row-reverse;
+}
+.stars{
+    color: #dcdcdc;
+    cursor: pointer;
+    font-size: 100px;
+    transition: 0.2s;
+}
+.stars:hover,
+.stars:hover ~ .stars{
+    color: #989898;
+}
+.block[data-total-value="1"] .stars:nth-child(n + 5),
+.block[data-total-value="2"] .stars:nth-child(n + 4),
+.block[data-total-value="3"] .stars:nth-child(n + 3),
+.block[data-total-value="4"] .stars:nth-child(n + 2),
+.block[data-total-value="5"] .stars:nth-child(n + 1){
+    color: orange;
+}
